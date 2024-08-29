@@ -7,11 +7,6 @@ app-id: com.github.yourusername.yourrepositoryname
 runtime: io.elementary.Platform
 runtime-version: "7.3"
 sdk: io.elementary.Sdk
-sdk-extensions:
-  - org.freedesktop.Sdk.Extension.vala
-build-options:
-  prepend-path: /usr/lib/sdk/vala/bin
-  prepend-ld-library-path: /usr/lib/sdk/vala/lib
 
 # This should match the exec line in your .desktop file and usually is the same
 # as your app ID
