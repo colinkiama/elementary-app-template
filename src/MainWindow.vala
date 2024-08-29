@@ -17,7 +17,44 @@ public class MyApp.MainWindow : Adw.ApplicationWindow {
     }
 
     construct {
+        var about_window = new Adw.AboutWindow.from_appdata (
+            @"$(Constants.APP_PATH)metainfo.xml",
+            Constants.APP_VERSION
+        ) {
+            transient_for = this,
+            hide_on_close = true,
+
+            /// The translator credits. Please translate this with your name(s).
+            translator_credits = _("translator-credits"),
+        };
+
+        about_window.copyright = "© 2024-%i %s".printf (
+            new DateTime.now_local ().get_year (),
+            about_window.developer_name
+        );
+
+        var about_action = new SimpleAction ("about", null);
+        about_action.activate.connect (() => about_window.present ());
+        about_action.set_enabled (true);
+        add_action (about_action);
+
+        var settings_menu_model = new GLib.Menu ();
+        settings_menu_model.append (_("About"), "win.about");
+
+        var settings_popover = new Gtk.PopoverMenu.from_model_full (
+            settings_menu_model,
+            Gtk.PopoverMenuFlags.NESTED
+        );
+
+        var settings_button = new Gtk.MenuButton () {
+            css_classes = { "flat" },
+            popover = settings_popover,
+            tooltip_text = _("Main Menu"),
+            icon_name = "open-menu-symbolic",
+        };
+
         var header = new Adw.HeaderBar ();
+        header.pack_end (settings_button);
 
         var app_label = new Gtk.Label (_("Hello World"));
         app_label.hexpand = true;

@@ -86,7 +86,8 @@ subdir('po')
 executable(
     app_id,
     app_sources,
-    gresource,
+    source_gresource,
+    build_gresource,
     dependencies: [
         app_dependencies,
         app_lib_dep

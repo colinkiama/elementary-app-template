@@ -2,7 +2,7 @@
 <component type="desktop-application">
   <id>@APP_ID@</id>
   
-  <name>@APP_TITLE</name>
+  <name>@APP_TITLE@</name>
   <summary>An elementary app.</summary>
 
   <metadata_license>CC-BY-4.0</metadata_license>

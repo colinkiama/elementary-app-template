@@ -1,5 +1,5 @@
 # Tell meson where to find our resources file and to compile it as a GResource
-gresource = gnome.compile_resources(
+source_gresource = gnome.compile_resources(
     'gresource',
     configure_file(
         input: app_name + '.gresource.xml.in',
@@ -7,6 +7,16 @@ gresource = gnome.compile_resources(
         configuration: config_data,
     ),
     source_dir: join_paths(meson.source_root(), 'data'),
+)
+
+build_gresource = gnome.compile_resources(
+    'build_gresource',
+    configure_file(
+        input: app_name + '-build.gresource.xml.in',
+        output: app_name + '-build.gresource.xml',
+        configuration: config_data,
+    ),
+    source_dir: join_paths(meson.build_root(), 'data'),
 )
 
 #Translate and install our .desktop file
