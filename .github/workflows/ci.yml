@@ -1,0 +1,63 @@
+name: CI
+
+# This workflow will run for any pull request and pushed commit to the main branch.
+on:
+  push:
+    branches: [ main ]
+
+  pull_request:
+    branches: [ main ]
+    types:
+      - opened
+      - reopened
+      - synchronize
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+
+jobs:
+  flatpak:
+    name: Flatpak
+
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # This job runs in a special container designed for building Flatpaks for AppCenter
+    container:
+      image: ghcr.io/elementary/flatpak-platform/runtime:7.3
+      options: --privileged
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: Checkout
+        # Checks-out your repository under $GITHUB_WORKSPACE, so the job can access it
+        uses: actions/checkout@v4
+
+      # Builds your flatpak manifest using the Flatpak Builder action
+      - name: Build
+        uses: flatpak/flatpak-github-actions/flatpak-builder@v6
+        with:
+          # This is the name of the Bundle file we're building and can be anything you like
+          bundle: MyApp.flatpak
+          # This uses your app's RDNN ID
+          manifest-path: com.github.yourusername.yourrepositoryname.yml
+
+          # You can automatically run any of the tests you've created as part of this workflow
+          run-tests: true
+
+          repository-name: appcenter
+          repository-url: https://flatpak.elementary.io/repo.flatpakrepo
+          cache-key: "flatpak-builder-${{ github.sha }}"
+
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+
+    container:
+      image: valalang/lint
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Lint
+        run: io.elementary.vala-lint -d .
