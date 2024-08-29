@@ -1,3 +1,4 @@
 src/Config.vala.in
 src/Application.vala
 src/MainWindow.vala
+lib/Lib.vala
