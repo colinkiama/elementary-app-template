@@ -47,10 +47,9 @@ public class MyApp.MainWindow : Adw.ApplicationWindow {
         );
 
         var settings_button = new Gtk.MenuButton () {
-            css_classes = { "flat" },
             popover = settings_popover,
             tooltip_text = _("Main Menu"),
-            icon_name = "open-menu-symbolic",
+            icon_name = "open-menu",
         };
 
         var header = new Adw.HeaderBar ();
