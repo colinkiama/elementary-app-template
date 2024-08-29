@@ -1,0 +1,25 @@
+{
+  "id": "com.github.yourusername.yourrepositoryname",
+  "runtime": "io.elementary.Platform",
+  "runtime-version": "7.3",
+  "sdk": "io.elementary.Sdk",
+  "command": "com.github.yourusername.yourrepositoryname",
+  "finish-args": [
+    "--device=dri",
+    "--share=ipc",
+    "--socket=fallback-x11",
+    "--socket=wayland"
+  ],
+  "modules": [
+    {
+      "name": "my-app",
+      "buildsystem": "meson",
+      "sources": [
+        {
+          "type": "dir",
+          "path": "."
+        }
+      ]
+    }
+  ]
+}
