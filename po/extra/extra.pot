@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-29 22:47+0100\n"
+"POT-Creation-Date: 2024-09-01 12:49+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,7 +30,7 @@ msgid "An elementary app"
 msgstr ""
 
 #: data/my-app.metainfo.xml.in.in:20
-msgid "@APP_DEVELOPER_NAME@"
+msgid "yourusername"
 msgstr ""
 
 #: data/my-app.gschema.xml.in:6 data/my-app.gschema.xml.in:7
