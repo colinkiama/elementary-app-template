@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+set -x
+
+# Get app name
+read -rp "Enter app name with intended capitalisation: " app_name
+app_name_lower=$(echo "${app_name}" | tr '[:upper:]' '[:lower:]')
+app_name_lower=${app_name_lower// /-}
+
+# Get user name
+read -rp "Enter github username: " user_name
+user_name=$(echo "${user_name}" | tr '[:upper:]' '[:lower:]')
+
+# Set App ID and path
+app_id="io.github.${user_name}.${app_name_lower}"
+app_path="${app_id//./\/}"
+
+# Get App Namespace
+read -rp "Enter namespace to use for the application (Used in Vala code files): " app_namespace
+
+# Get App summary
+read -rp "Enter app summary (will be used in desktop file and AppStream metainfo): " app_summary
+
+# Get App categories
+read -rp "Enter app categories (semi-colon-seperated) e.g \"Office;Network;\": " app_categories
+
+# Get App Keywords
+read -rp "Enter app keywords (so that you app is more discoverable in app stores): " app_keywords
+
+# Get App Homepage URL
+read -rp "Enter app homepage URL: " app_homepage_url
+
+# Get App Bug Tracker URL
+read -rp "Enter app bug tracker URL: " app_bug_tracker_url
+
+# Get App License Type
+read -rp "Enter app license type: " app_license_type
