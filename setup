@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+
+# inspired by elementary-template setup.sh script by ChildishGiant:
+# https://github.com/watsonprojects/elementary-template/blob/main/setup.sh
+
 set -x
 
 # Get app name
@@ -34,3 +38,17 @@ read -rp "Enter app bug tracker URL: " app_bug_tracker_url
 
 # Get App License Type
 read -rp "Enter app license type: " app_license_type
+
+# Replace all instances of app_name in files
+find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{APP_NAME}}/${app_name}/g" {} +
+find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{APP_NAME_LOWER}}/${app_name_lower}/g" {} +
+
+# Replace all instances of user_name in files
+find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{USER_NAME}}/${user_name}/g" {} +
+
+# Replace instances of app_namespace in files
+find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{APP_NAMESPACE}}/${app_namespace}/g" {} +
+
+# Rename all needed files
+mv "data/io.github.{{USER_NAME}}.{{APP_NAME_LOWER}}.desktop.in" "data/io.github.${user_name}.${app_name_lower}.desktop.in"
+mv "data/io.github.{{USER_NAME}}.{{APP_NAME_LOWER}}.appdata.xml.in" "data/io.github.${user_name}.${app_name_lower}.appdata.xml.in"

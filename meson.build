@@ -1,12 +1,12 @@
 # project name and programming language
 project(
-    'com.github.yourusername.yourrepositoryname',
+    'io.github.yourusername.yourrepositoryname',
     'vala',
     'c',
     version: '0.0.1',
 )
 
-app_id = 'com.github.yourusername.yourrepositoryname'
+app_id = 'io.github.yourusername.yourrepositoryname'
 app_title = 'My App'
 app_name = 'my-app'
 app_developer_name = 'yourusername'
