@@ -6,16 +6,16 @@
 set -x
 
 # Get app name
-read -rp "Enter app name with intended capitalisation: " app_name
-app_name_lower=$(echo "${app_name}" | tr '[:upper:]' '[:lower:]')
-app_name_lower=${app_name_lower// /-}
+read -rp "Enter app name with intended capitalisation: " app_title
+app_name=$(echo "${app_title}" | tr '[:upper:]' '[:lower:]')
+app_name=${app_name// /-}
 
 # Get user name
 read -rp "Enter github username: " user_name
 user_name=$(echo "${user_name}" | tr '[:upper:]' '[:lower:]')
 
 # Set App ID and path
-app_id="io.github.${user_name}.${app_name_lower}"
+app_id="io.github.${user_name}.${app_name}"
 app_path="${app_id//./\/}"
 
 # Get App Namespace
@@ -39,16 +39,40 @@ read -rp "Enter app bug tracker URL: " app_bug_tracker_url
 # Get App License Type
 read -rp "Enter app license type: " app_license_type
 
+# Replace all instances of app_title in files
+find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{APP_TITLE}}/${app_title}/g" {} +
+
 # Replace all instances of app_name in files
 find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{APP_NAME}}/${app_name}/g" {} +
-find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{APP_NAME_LOWER}}/${app_name_lower}/g" {} +
 
 # Replace all instances of user_name in files
 find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{USER_NAME}}/${user_name}/g" {} +
 
-# Replace instances of app_namespace in files
+# Replace all instances of app_namespace in files
 find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{APP_NAMESPACE}}/${app_namespace}/g" {} +
 
+# Replace all instances of app_path in files
+find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{APP_PATH}}/${app_path}/g" {} +
+
+# Replace all instances of app_summary
+find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{APP_SUMMARY}}/${app_summary}/g" {} +
+
+# Replace all instances of app_categories
+find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{APP_CATEGORIES}}/${app_categories}/g" {} +
+
+# Replace all instances of app_keywords
+find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{APP_KEYWORDS}}/${app_keywords}/g" {} +
+
+# Replace all instances of app_homepage_url
+find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{APP_HOMEPAGE_URL}}/${app_homepage_url}/g" {} +
+
+# Replace all instances of app_bug_tracker_url
+find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{APP_BUG_TRACKER_URL}}/${app_bug_tracker_url}/g" {} +
+
+# Replace all instances of app_license_type
+find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{APP_LICENSE_TYPE}}/${app_license_type}/g" {} +
+
 # Rename all needed files
-mv "data/io.github.{{USER_NAME}}.{{APP_NAME_LOWER}}.desktop.in" "data/io.github.${user_name}.${app_name_lower}.desktop.in"
-mv "data/io.github.{{USER_NAME}}.{{APP_NAME_LOWER}}.appdata.xml.in" "data/io.github.${user_name}.${app_name_lower}.appdata.xml.in"
+mv "data/io.github.{{USER_NAME}}.{{APP_NAME}}.desktop.in" "data/io.github.${user_name}.${app_name}.desktop.in"
+mv "data/io.github.{{USER_NAME}}.{{APP_NAME}}.appdata.xml.in" "data/io.github.${user_name}.${app_name}.metainfo.xml.in"
+mv "io.github.{{USER_NAME}}.{{APP_NAME}}.json" "io.github.${user_name}.${app_name}.json"
