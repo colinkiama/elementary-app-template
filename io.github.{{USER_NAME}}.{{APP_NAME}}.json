@@ -1,9 +1,9 @@
 {
-  "id": "io.github.yourusername.yourrepositoryname",
+  "id": "io.github.{{USER_NAME}}.{{APP_NAME}}.json",
   "runtime": "io.elementary.Platform",
   "runtime-version": "7.3",
   "sdk": "io.elementary.Sdk",
-  "command": "io.github.yourusername.yourrepositoryname",
+  "command": "io.github.{{USER_NAME}}.{{APP_NAME}}.json",
   "finish-args": [
     "--device=dri",
     "--share=ipc",

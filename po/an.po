@@ -1,11 +1,11 @@
-# Aragonese translations for io.github.yourusername.yourrepositoryname package.
-# Copyright (C) 2024 THE io.github.yourusername.yourrepositoryname'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the io.github.yourusername.yourrepositoryname package.
+# Aragonese translations for io.github.{{USER_NAME}}.{{APP_NAME}} package.
+# Copyright (C) 2024 THE io.github.{{USER_NAME}}.{{APP_NAME}}'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the io.github.{{USER_NAME}}.{{APP_NAME}} package.
 # Automatically generated, 2024.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: io.github.yourusername.yourrepositoryname\n"
+"Project-Id-Version: io.github.{{USER_NAME}}.{{APP_NAME}}\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-01 12:49+0100\n"
 "PO-Revision-Date: 2024-08-29 22:19+0100\n"
