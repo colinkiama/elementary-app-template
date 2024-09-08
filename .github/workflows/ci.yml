@@ -37,9 +37,9 @@ jobs:
         uses: flatpak/flatpak-github-actions/flatpak-builder@v6
         with:
           # This is the name of the Bundle file we're building and can be anything you like
-          bundle: MyApp.flatpak
+          bundle: {{APP_NAME}}.flatpak
           # This uses your app's RDNN ID
-          manifest-path: io.github.{{USER_NAME}}.{{APP_NAME}}.json
+          manifest-path: {{APP_ID}}.json
 
           # You can automatically run any of the tests you've created as part of this workflow
           run-tests: true

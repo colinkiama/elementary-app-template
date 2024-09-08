@@ -1,6 +1,6 @@
-# My App
+# {{APP_TITLE}}
 
-An elementary app.
+{{APP_SUMMARY}}
 
 ## Build Instructions
 

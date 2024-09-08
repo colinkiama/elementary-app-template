@@ -1,6 +1,6 @@
 void add_foo_tests () {
-    Test.add_func ("/my-app/hello", () => {
-        assert (MyApp.say_hello ("World") == "Hello World!");
+    Test.add_func (@"/$(Constants.APP_NAME)/hello", () => {
+        assert ({{APP_NAMESPACE}}.say_hello ("World") == "Hello World!");
     });
 }
 

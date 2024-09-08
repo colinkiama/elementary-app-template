@@ -1,9 +1,9 @@
 {
-  "id": "io.github.{{USER_NAME}}.{{APP_NAME}}.json",
+  "id": "{{APP_ID}}",
   "runtime": "io.elementary.Platform",
   "runtime-version": "7.3",
   "sdk": "io.elementary.Sdk",
-  "command": "io.github.{{USER_NAME}}.{{APP_NAME}}.json",
+  "command": "{{APP_ID}}",
   "finish-args": [
     "--device=dri",
     "--share=ipc",
@@ -12,7 +12,7 @@
   ],
   "modules": [
     {
-      "name": "my-app",
+      "name": "{{APP_NAME}}",
       "buildsystem": "meson",
       "sources": [
         {

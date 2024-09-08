@@ -3,13 +3,13 @@
   <id>@APP_ID@</id>
   
   <name>@APP_TITLE@</name>
-  <summary>An elementary app.</summary>
+  <summary>{{APP_SUMMARY}}</summary>
 
   <metadata_license>CC-BY-4.0</metadata_license>
   <project_license>@APP_LICENSE_TYPE@</project_license>
 
   <description>
-    <p>An elementary app</p>
+    <p>{{APP_SUMMARY}}</p>
   </description>
   
   <launchable type="desktop-id">@APP_ID@.desktop</launchable>
@@ -17,7 +17,7 @@
   <url type="homepage">@APP_HOMEPAGE_URL@</url>
   <url type="bugtracker">@APP_BUG_TRACKER_URL@</url>
 
-  <developer_name>yourusername</developer_name>
+  <developer_name>{{USER_NAME}}</developer_name>
 
   <content_rating type="oars-1.1"></content_rating>
 

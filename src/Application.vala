@@ -1,4 +1,4 @@
-public class MyApp.Application : Gtk.Application {
+public class {{APP_NAMESPACE}}.Application : Gtk.Application {
     public Application () {
         Object (application_id: Constants.APP_ID);
     }
@@ -64,6 +64,6 @@ public class MyApp.Application : Gtk.Application {
 }
 
 public static int main (string[] args) {
-    var my_app = new MyApp.Application ();
+    var my_app = new {{APP_NAMESPACE}}.Application ();
     return my_app.run (args);
 }

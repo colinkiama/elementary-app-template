@@ -1,4 +1,4 @@
-public class MyApp.MainWindow : Adw.ApplicationWindow {
+public class {{APP_NAMESPACE}}.MainWindow : Adw.ApplicationWindow {
     public MainWindow (Gtk.Application app) {
         Object (
             application: app
@@ -59,7 +59,7 @@ public class MyApp.MainWindow : Adw.ApplicationWindow {
         app_label.hexpand = true;
         app_label.halign = Gtk.Align.CENTER;
 
-        var lib_label = new Gtk.Label (MyApp.say_hello ("from Vala"));
+        var lib_label = new Gtk.Label ({{APP_NAMESPACE}}.say_hello ("from Vala"));
         lib_label.hexpand = true;
         lib_label.halign = Gtk.Align.CENTER;
 

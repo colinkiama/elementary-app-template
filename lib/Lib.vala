@@ -1,4 +1,4 @@
-namespace MyApp {
+namespace {{APP_NAMESPACE}} {
     /**
      * Say hello to anything or anyone!
      *

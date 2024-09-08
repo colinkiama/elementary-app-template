@@ -72,7 +72,10 @@ find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{APP_BU
 # Replace all instances of app_license_type
 find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{APP_LICENSE_TYPE}}/${app_license_type}/g" {} +
 
-# Rename all needed files
-mv "data/io.github.{{USER_NAME}}.{{APP_NAME}}.desktop.in" "data/io.github.${user_name}.${app_name}.desktop.in"
-mv "data/io.github.{{USER_NAME}}.{{APP_NAME}}.appdata.xml.in" "data/io.github.${user_name}.${app_name}.metainfo.xml.in"
-mv "io.github.{{USER_NAME}}.{{APP_NAME}}.json" "io.github.${user_name}.${app_name}.json"
+# Rename all template named data and metadata files
+mv "data/{{APP_NAME}}-build.gresource.xml.in" "data/${app_name}-build.gresource.xml.in"
+mv "data/{{APP_NAME}}.desktop.in.in" "data/${app_name}.desktop.in.in"
+mv "data/{{APP_NAME}}.gresource.xml.in" "data/${app_name}.gresource.xml.in"
+mv "data/{{APP_NAME}}.gschema.xml.in" "data/${app_name}.gschema.xml.in"
+mv "data/{{APP_NAME}}.metainfo.xml.in" "data/${app_name}.metainfo.xml.in"
+mv "{{APP_ID}}.json" "${app_id}.json"

@@ -1,22 +1,21 @@
 # project name and programming language
 project(
-    'io.github.{{USER_NAME}}.{{APP_NAME}}',
+    '{{APP_ID}}',
     'vala',
     'c',
     version: '0.0.1',
 )
 
-app_id = 'io.github.{{USER_NAME}}.{{APP_NAME}}'
-app_title = 'My App'
-app_name = 'my-app'
-app_developer_name = 'yourusername'
-app_homepage_url = 'https://github.com/yourusername/yourrepositoryname'
-app_bug_tracker_url = 'https://github.com/yourusername/yourrepositoryname/issues'
-app_categories = 'Utility;'
+app_id = '{{APP_ID}}'
+app_title = '{{APP_TITLE}}'
+app_name = '{{APP_NAME}}'
+app_homepage_url = '{{APP_HOMEPAGE_URL}}'
+app_bug_tracker_url = '{{APP_BUG_TRACKER_URL}}'
+app_categories = '{{APP_CATEGORIES}'
 
 # Feel free to change it to whatever you prefer
 # Don't forget to create your LICENSE.md or COPYING file!
-app_license_type = 'GPL-3.0-or-later'
+app_license_type = '{{APP_LICENSE_TYPE}}'
 
 # Import modules
 gnome = import('gnome')
