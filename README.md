@@ -2,6 +2,10 @@
 
 {{APP_SUMMARY}}
 
+![App Main View - Hello World](.github/screenshots/screenshot-1.png)
+
+![App About page - Featuring links to app website and issue reporting](.github/screenshots//screenshot-2.png)
+
 ## Build Instructions
 
 ### Flatpak (Recommended)
