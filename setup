@@ -3,8 +3,6 @@
 # inspired by elementary-template setup.sh script by ChildishGiant:
 # https://github.com/watsonprojects/elementary-template/blob/main/setup.sh
 
-set -x
-
 # Get app name
 read -rp "Enter app name with intended capitalisation: " app_title
 app_name=$(echo "${app_title}" | tr '[:upper:]' '[:lower:]')

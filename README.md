@@ -23,6 +23,28 @@ Either:
 -   gtk4
 -   granite-7
 
+#### Template Setup
+
+Before you can build the project, you'll need to setup your project from the template.
+
+Make the `setup` script exectuable if it isn't already:
+
+(Assuming you're in the project root)
+
+```sh
+chmod +x ./setup
+```
+
+Then run the `./setup` script
+
+(Assuming you're in the project root)
+
+```sh
+./setup
+```
+
+After running the setup script, you will be ready to build the project.
+
 #### Build Commands
 
 To setup build diectory:
