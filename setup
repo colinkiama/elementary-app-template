@@ -77,5 +77,5 @@ mv "data/{{APP_NAME}}-build.gresource.xml.in" "data/${app_name}-build.gresource.
 mv "data/{{APP_NAME}}.desktop.in.in" "data/${app_name}.desktop.in.in"
 mv "data/{{APP_NAME}}.gresource.xml.in" "data/${app_name}.gresource.xml.in"
 mv "data/{{APP_NAME}}.gschema.xml.in" "data/${app_name}.gschema.xml.in"
-mv "data/{{APP_NAME}}.metainfo.xml.in" "data/${app_name}.metainfo.xml.in"
+mv "data/{{APP_NAME}}.metainfo.xml.in.in" "data/${app_name}.metainfo.xml.in.in"
 mv "{{APP_ID}}.json" "${app_id}.json"
