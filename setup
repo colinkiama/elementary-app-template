@@ -48,6 +48,9 @@ find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{APP_NA
 # Replace all instances of user_name in files
 find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{USER_NAME}}/${user_name}/g" {} +
 
+# Replace all instances of app_id in files
+find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{APP_ID}}/${app_id}/g" {} +
+
 # Replace all instances of app_namespace in files
 find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{APP_NAMESPACE}}/${app_namespace}/g" {} +
 
