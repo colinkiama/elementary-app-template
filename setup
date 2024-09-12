@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# inspired by elementary-template setup.sh script by ChildishGiant:
+# Inspired by elementary-template setup.sh script:
 # https://github.com/watsonprojects/elementary-template/blob/main/setup.sh
 
 # Get app name
