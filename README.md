@@ -6,6 +6,7 @@
 
 ![App About page - Featuring links to app website and issue reporting](.github/screenshots//screenshot-2.png)
 
+
 ## Build Instructions
 
 ### Flatpak (Recommended)
@@ -90,3 +91,7 @@ To install:
 cd build
 sudo ninja install
 ```
+
+## Publishing app to AppCenter
+
+For information about publishing elementary OS apps to the AppCenter, visit the elementary OS developer documentation: https://docs.elementary.io/develop/appcenter/publishing-requirements
