@@ -11,7 +11,7 @@ app_title = '{{APP_TITLE}}'
 app_name = '{{APP_NAME}}'
 app_homepage_url = '{{APP_HOMEPAGE_URL}}'
 app_bug_tracker_url = '{{APP_BUG_TRACKER_URL}}'
-app_categories = '{{APP_CATEGORIES}'
+app_categories = '{{APP_CATEGORIES}}'
 
 # Feel free to change it to whatever you prefer
 # Don't forget to create your LICENSE.md or COPYING file!

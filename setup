@@ -38,40 +38,40 @@ read -rp "Enter app bug tracker URL: " app_bug_tracker_url
 read -rp "Enter app license type: " app_license_type
 
 # Replace all instances of app_title in files
-find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{APP_TITLE}}/${app_title}/g" {} +
+find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s%{{APP_TITLE}}%${app_title}%g" {} +
 
 # Replace all instances of app_name in files
-find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{APP_NAME}}/${app_name}/g" {} +
+find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s%{{APP_NAME}}%${app_name}%g" {} +
 
 # Replace all instances of user_name in files
-find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{USER_NAME}}/${user_name}/g" {} +
+find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s%{{USER_NAME}}%${user_name}%g" {} +
 
 # Replace all instances of app_id in files
-find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{APP_ID}}/${app_id}/g" {} +
+find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s%{{APP_ID}}%${app_id}%g" {} +
 
 # Replace all instances of app_namespace in files
-find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{APP_NAMESPACE}}/${app_namespace}/g" {} +
+find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s%{{APP_NAMESPACE}}%${app_namespace}%g" {} +
 
 # Replace all instances of app_path in files
-find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{APP_PATH}}/${app_path}/g" {} +
+find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s%{{APP_PATH}}%${app_path}%g" {} +
 
 # Replace all instances of app_summary
-find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{APP_SUMMARY}}/${app_summary}/g" {} +
+find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s%{{APP_SUMMARY}}%${app_summary}%g" {} +
 
 # Replace all instances of app_categories
-find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{APP_CATEGORIES}}/${app_categories}/g" {} +
+find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s%{{APP_CATEGORIES}}%${app_categories}%g" {} +
 
 # Replace all instances of app_keywords
-find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{APP_KEYWORDS}}/${app_keywords}/g" {} +
+find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s%{{APP_KEYWORDS}}%${app_keywords}%g" {} +
 
 # Replace all instances of app_homepage_url
-find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{APP_HOMEPAGE_URL}}/${app_homepage_url}/g" {} +
+find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s%{{APP_HOMEPAGE_URL}}%${app_homepage_url}%g" {} +
 
 # Replace all instances of app_bug_tracker_url
-find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{APP_BUG_TRACKER_URL}}/${app_bug_tracker_url}/g" {} +
+find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s%{{APP_BUG_TRACKER_URL}}%${app_bug_tracker_url}%g" {} +
 
 # Replace all instances of app_license_type
-find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s/{{APP_LICENSE_TYPE}}/${app_license_type}/g" {} +
+find . -type f -not -path '*/\.*' -not -name "setup.sh" -exec sed -i "s%{{APP_LICENSE_TYPE}}%${app_license_type}%g" {} +
 
 # Rename all template named data and metadata files
 mv "data/{{APP_NAME}}-build.gresource.xml.in" "data/${app_name}-build.gresource.xml.in"
