@@ -6,6 +6,21 @@
 
 ![App About page - Featuring links to app website and issue reporting](.github/screenshots//screenshot-2.png)
 
+## How to Generate Projects From This Template
+
+### Latest version
+
+Template releases align with elementary Flatpak platform releases.
+
+`main` branch follows the latest elementary Flatpak platform version as closely as possible.
+So you can press the "Use this template" button to use the latest template.
+
+### Older versions
+
+For templates based on older elementary Flatpak platorm versions, you can either:
+- Download archives from GitHub releases
+- Check out tag branches corresponding the elementary Flatpak platform version you would like to target 
+  e.g `7.3.0` for the template targeting elementary Flatpak Platform 7.3.0. You can then manage the git history and refs to meet your needs.
 
 ## Build Instructions
 
