@@ -63,7 +63,7 @@ global_dependencies = [
 
 libadwaita = dependency(
     'libadwaita-1',
-    version: '>= 1.0.0',
+    version: '>= 1.5.0',
     fallback: ['libadwaita', 'libadwaita_dep'],
     default_options: [
         'examples=false',
