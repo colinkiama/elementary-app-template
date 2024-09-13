@@ -39,11 +39,12 @@ Either:
 
 #### Dependencies
 
--   glib-2.0
--   gobject-2.0
--   gee-0.8
--   gtk4
--   granite-7
+- glib-2.0
+- gobject-2.0
+- gee-0.8
+- gtk4
+- granite-7
+- libadwaita-1
 
 #### Template Setup
 
