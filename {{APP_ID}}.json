@@ -1,7 +1,7 @@
 {
   "id": "{{APP_ID}}",
   "runtime": "io.elementary.Platform",
-  "runtime-version": "8.0",
+  "runtime-version": "8",
   "sdk": "io.elementary.Sdk",
   "command": "{{APP_ID}}",
   "finish-args": [

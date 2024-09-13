@@ -22,7 +22,7 @@ So you can press the "Use this template" button to use the latest template.
 For templates based on older elementary Flatpak platorm versions, you can either:
 - Download archives from GitHub releases
 - Check out tag branches corresponding the elementary Flatpak platform version you would like to target 
-  e.g `7.3.0` for the template targeting elementary Flatpak Platform 7.3.0. You can then manage the git history and refs to meet your needs.
+  e.g `7.3.0` for the template targeting elementary Flatpak Platform 7.3. You can then manage the git history and refs to meet your needs.
 
 ## Build Instructions
 
