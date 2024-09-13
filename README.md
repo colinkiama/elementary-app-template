@@ -6,6 +6,8 @@
 
 ![App About page - Featuring links to app website and issue reporting](.github/screenshots//screenshot-2.png)
 
+<p style="text-align: center;">This project was generated from <a href="https://github.com/colinkiama/elementary-app-template">elementary-app-template</a></p> 
+
 ## How to Generate Projects From This Template
 
 ### Latest version
