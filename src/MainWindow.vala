@@ -17,24 +17,21 @@ public class {{APP_NAMESPACE}}.MainWindow : Adw.ApplicationWindow {
     }
 
     construct {
-        var about_window = new Adw.AboutWindow.from_appdata (
+        var about_dialog = new Adw.AboutDialog.from_appdata (
             @"$(Constants.APP_PATH)metainfo.xml",
             Constants.APP_VERSION
         ) {
-            transient_for = this,
-            hide_on_close = true,
-
             /// The translator credits. Please translate this with your name(s).
             translator_credits = _("translator-credits"),
         };
 
-        about_window.copyright = "© 2024-%i %s".printf (
+        about_dialog.copyright = "© 2024-%i %s".printf (
             new DateTime.now_local ().get_year (),
-            about_window.developer_name
+            about_dialog.developer_name
         );
 
         var about_action = new SimpleAction ("about", null);
-        about_action.activate.connect (() => about_window.present ());
+        about_action.activate.connect (() => about_dialog.present (this));
         about_action.set_enabled (true);
         add_action (about_action);
 
